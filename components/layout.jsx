@@ -3,7 +3,7 @@ import styles from "./layout.module.css";
 import Link from "next/link";
 import Header from "./Header";
 
-export const siteTitle = "Exercise 03";
+export const siteTitle = "Exercise 04";
 
 export default function Layout({ children, home }) {
     return (
