@@ -1,9 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "build": "prisma generate && prisma migrate deploy && next build",
+    "local-build": "prisma generate && prisma migrate deploy && next build",
+    "production-build": "next build",
+    "production-migrate": "prisma generate && prisma migrate deploy",
     "dev": "next dev",
-    "start": "next start"
+    "start": "next start -H 0.0.0.0"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.7",
