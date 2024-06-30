@@ -1,13 +1,14 @@
 // schema.prisma
 
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
 }
 
 datasource db {
   provider = "postgresql"
   url = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_PRISMA_URL_DIRECT") // uses direct connection
+  directUrl = env("POSTGRES_PRISMA_URL") // uses direct connection
 }
 
 model Post {

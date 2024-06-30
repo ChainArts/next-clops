@@ -37,7 +37,7 @@ export default function Home({ feed }) {
     );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     let feed;
     
     try {
